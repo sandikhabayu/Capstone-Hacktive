@@ -1,0 +1,17 @@
+footer {
+    background-color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    color:aliceblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-bottom {
+    color: white;
+}
