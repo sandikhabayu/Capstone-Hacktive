@@ -184,7 +184,7 @@ function App() {
                       loading={loading && filteredStories.length === 0}
                     />
                   } />
-                  <Route path="/indonesia" element={<IndonesiaNews />                  } />
+                  <Route path="/indonesia" element={<IndonesiaNews />} />
                   <Route path="/technology" element={<TechnologyNews />} />
                   <Route path="/health" element={<HealthNews />} />
                   <Route path="/saved" element={<SavedNews />} />
