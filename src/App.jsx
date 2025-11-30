@@ -15,7 +15,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [topStories, setTopStories] = useState([]);
-  const [allStories, setAllStories] = useState([]); // NEW: untuk All News
+  const [allStories, setAllStories] = useState([]);
   const [filteredStories, setFilteredStories] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -172,7 +172,6 @@ function App() {
       <div className="App">
         <div className="container">
           <div className='page-content'>
-            {/* Hero dengan 5 berita terpilih */}
             <Hero articles={topStories} />
               <CategoryTabs />
             <div className="content-layout">
@@ -180,32 +179,14 @@ function App() {
                 <Routes>
                   <Route path="/" element={
                     <AllNews 
-                      stories={filteredStories} // Gunakan filteredStories yang bisa banyak
+                      stories={filteredStories}
                       selectedTopic={selectedTopic}
                       loading={loading && filteredStories.length === 0}
                     />
                   } />
-                  <Route path="/indonesia" element={
-                    <IndonesiaNews 
-                      stories={filteredStories}
-                      selectedTopic={selectedTopic}
-                      loading={loading}
-                    />
-                  } />
-                  <Route path="/technology" element={
-                    <TechnologyNews 
-                      stories={filteredStories}
-                      selectedTopic={selectedTopic}
-                      loading={loading}
-                    />
-                  } />
-                  <Route path="/health" element={
-                    <HealthNews 
-                      stories={filteredStories}
-                      selectedTopic={selectedTopic}
-                      loading={loading}
-                    />
-                  } />
+                  <Route path="/indonesia" element={<IndonesiaNews />                  } />
+                  <Route path="/technology" element={<TechnologyNews />} />
+                  <Route path="/health" element={<HealthNews />} />
                   <Route path="/saved" element={<SavedNews />} />
                 </Routes>
               </div>
