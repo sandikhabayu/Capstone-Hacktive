@@ -1,7 +1,6 @@
-/* App.css */
 body {
-  background-color: #E5E5E5; /* Warna background sesuai wireframe */
-  font-family: 'Inter', sans-serif; /* Gunakan font modern */
+  background-color: #E5E5E5; 
+  font-family: 'Inter', sans-serif;
   color: #333;
 }
 
@@ -14,7 +13,7 @@ body {
 /* Layout utama untuk halaman berita (Content + Sidebar) */
 .main-content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* 2 bagian berita, 1 bagian sidebar */
+  grid-template-columns: 2fr 1fr; 
   gap: 40px;
   margin-top: 20px;
 }
@@ -27,7 +26,7 @@ body {
 }
 
 .main-content {
-  min-width: 0; /* Prevent overflow */
+  min-width: 0; 
 }
 
 .sidebar-content {
